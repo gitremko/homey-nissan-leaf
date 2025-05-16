@@ -77,6 +77,7 @@ class LeafDevice extends Device {
       this.setCapabilityValue('measure_battery', Number(BatteryStatus.SOC.Value)).catch(this.error);
       this.setCapabilityValue('is_charging', isCharging).catch(this.error);
       this.setCapabilityValue('is_connected', isConnected).catch(this.error);
+      this.setCapabilityValue('measure_temperature', Number(climateControlStatus.RemoteACRecords.Temparature)).catch(this.error);
       this.setCapabilityValue('cruising_range_ac_off', Number(CruisingRangeAcOff) / 1000).catch(this.error);
       this.setCapabilityValue('cruising_range_ac_on', Number(CruisingRangeAcOn) / 1000).catch(this.error);
     } catch (error) {
