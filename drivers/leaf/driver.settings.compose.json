@@ -32,7 +32,7 @@
       "en": "Poll interval",
       "no": "Poll intervall"
     },
-    "value": 240,
+    "value": 300,
     "units": {
       "en": "seconds",
       "no": "sekunder"

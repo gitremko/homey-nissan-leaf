@@ -1,7 +1,7 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "com.nissan.leaf",
-  "version": "1.0.22",
+  "version": "1.0.25",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#eb1b29",
@@ -12,11 +12,13 @@
   ],
   "name": {
     "en": "Nissan Leaf",
-    "no": "Nissan Leaf"
+    "no": "Nissan Leaf",
+    "nl": "Nissan Leaf"
   },
   "description": {
     "en": "Switch to smarter driving",
-    "no": "Bytt til smartere kjøring"
+    "no": "Bytt til smartere kjøring",
+    "nl": "Schakel over op slimmer rijden"
   },
   "category": [
     "tools"
@@ -33,137 +35,140 @@
   "drivers": [
     {
       "name": {
-        "en": "Nissan Leaf"
+        "en": "Nissan Leaf",
+        "no": "Nissan Leaf",
+        "nl": "Nissan Leaf"
       },
       "class": "other",
       "capabilities": [
+        "measure_temperature_actual",
+        "set_temperature",
         "measure_battery",
         "button_climate",
         "button_charging",
-        "measure_temperature",
         "is_charging",
-      "is_connected",
-      "cruising_range_ac_on",
-      "cruising_range_ac_off"
-    ],
-    "energy": {
-      "batteries": [
-        "INTERNAL"
-      ]
-    },
-    "platforms": [
-      "local"
-    ],
-    "connectivity": [
-      "cloud"
-    ],
-    "images": {
-      "small": "/drivers/leaf/assets/images/small.png",
-      "large": "/drivers/leaf/assets/images/large.png"
-    },
-    "pair": [
-      {
-        "id": "start"
+        "is_connected",
+        "cruising_range_ac_on",
+        "cruising_range_ac_off"
+      ],
+      "energy": {
+        "batteries": [
+          "INTERNAL"
+        ]
       },
-      {
-        "id": "list_devices",
-        "template": "list_devices",
-        "navigation": {
-          "next": "add_devices"
-        },
-        "options": {
-          "singular": true
-        }
+      "platforms": [
+        "local"
+      ],
+      "connectivity": [
+        "cloud"
+      ],
+      "images": {
+        "small": "/drivers/leaf/assets/images/small.png",
+        "large": "/drivers/leaf/assets/images/large.png"
       },
-      {
-        "id": "add_devices",
-        "template": "add_devices"
-      }
-    ],
-    "id": "leaf",
-    "settings": [
-      {
-        "id": "username",
-        "type": "text",
-        "label": {
-          "en": "Username",
-          "no": "Brukernavn"
+      "pair": [
+        {
+          "id": "start"
         },
-        "value": "John Doe",
-        "hint": {
-          "en": "The name of the user.",
-          "no": "Navnet på brukeren."
-        }
-      },
-      {
-        "id": "password",
-        "type": "password",
-        "label": {
-          "en": "Password",
-          "no": "Passord"
-        },
-        "value": "Secret",
-        "hint": {
-          "en": "The password of the user.",
-          "no": "Brukerens passord."
-        }
-      },
-      {
-        "id": "pollInterval",
-        "type": "number",
-        "label": {
-          "en": "Poll interval",
-          "no": "Poll intervall"
-        },
-        "value": 240,
-        "units": {
-          "en": "seconds",
-          "no": "sekunder"
-        },
-        "hint": {
-          "en": "How often to poll for the status",
-          "no": "Hvor ofte skal vi polle for statusen"
-        }
-      },
-      {
-        "id": "regionCode",
-        "type": "dropdown",
-        "value": "NE",
-        "label": {
-          "en": "Select your region",
-          "no": "Velg din region"
-        },
-        "values": [
-          {
-            "id": "NE",
-            "label": {
-              "en": "Europe",
-              "no": "Europa"
-            }
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
           },
-          {
-            "id": "NCI",
-            "label": {
-              "en": "Canada",
-              "no": "Canada"
-            }
+          "options": {
+            "singular": true
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "id": "leaf",
+      "settings": [
+        {
+          "id": "username",
+          "type": "text",
+          "label": {
+            "en": "Username",
+            "no": "Brukernavn"
           },
-          {
-            "id": "NNA",
-            "label": {
-              "en": "USA",
-              "no": "USA"
-            }
+          "value": "John Doe",
+          "hint": {
+            "en": "The name of the user.",
+            "no": "Navnet på brukeren."
+          }
+        },
+        {
+          "id": "password",
+          "type": "password",
+          "label": {
+            "en": "Password",
+            "no": "Passord"
           },
-          {
-            "id": "NMA",
-            "label": {
-              "en": "Australia",
-              "no": "Australia"
-            }
+          "value": "Secret",
+          "hint": {
+            "en": "The password of the user.",
+            "no": "Brukerens passord."
+          }
+        },
+        {
+          "id": "pollInterval",
+          "type": "number",
+          "label": {
+            "en": "Poll interval",
+            "no": "Poll intervall"
           },
-          {
-            "id": "NML",
+          "value": 300,
+          "units": {
+            "en": "seconds",
+            "no": "sekunder"
+          },
+          "hint": {
+            "en": "How often to poll for the status",
+            "no": "Hvor ofte skal vi polle for statusen"
+          }
+        },
+        {
+          "id": "regionCode",
+          "type": "dropdown",
+          "value": "NE",
+          "label": {
+            "en": "Select your region",
+            "no": "Velg din region"
+          },
+          "values": [
+            {
+              "id": "NE",
+              "label": {
+                "en": "Europe",
+                "no": "Europa"
+              }
+            },
+            {
+              "id": "NCI",
+              "label": {
+                "en": "Canada",
+                "no": "Canada"
+              }
+            },
+            {
+              "id": "NNA",
+              "label": {
+                "en": "USA",
+                "no": "USA"
+              }
+            },
+            {
+              "id": "NMA",
+              "label": {
+                "en": "Australia",
+                "no": "Australia"
+              }
+            },
+            {
+              "id": "NML",
               "label": {
                 "en": "Japan",
                 "no": "Japan"
@@ -179,7 +184,8 @@
       "type": "boolean",
       "title": {
         "en": "Charging",
-        "no": "Lading"
+        "no": "Lading",
+        "nl": "Opladen"
       },
       "getable": true,
       "setable": true,
@@ -190,7 +196,8 @@
       "type": "boolean",
       "title": {
         "en": "Climate control",
-        "no": "Klimakontroll"
+        "no": "Klimakontroll",
+        "nl": "Klimaatregeling"
       },
       "getable": true,
       "setable": true,
@@ -201,7 +208,8 @@
       "type": "number",
       "title": {
         "en": "Crusing range (km) AC off",
-        "no": "Rekkevidde (km) AC av"
+        "no": "Rekkevidde (km) AC av",
+        "nl": "Actieradius (km) AC uit"
       },
       "units": {
         "en": "km",
@@ -217,7 +225,8 @@
       "type": "number",
       "title": {
         "en": "Crusing range (km) AC on",
-        "no": "Rekkevidde (km) AC på"
+        "no": "Rekkevidde (km) AC på",
+        "nl": "Actieradius (km) AC aan"
       },
       "units": {
         "en": "km",
@@ -233,7 +242,8 @@
       "type": "boolean",
       "title": {
         "en": "Charging status",
-        "no": "Ladestatus"
+        "no": "Ladestatus",
+        "nl": "Laadstatus"
       },
       "getable": true,
       "setable": false,
@@ -245,7 +255,8 @@
       "type": "boolean",
       "title": {
         "en": "Connected status",
-      "no": "Tilkoblingsstatus"
+        "no": "Tilkoblingsstatus",
+        "nl": "Verbindingsstatus"
       },
       "getable": true,
       "setable": false,
@@ -256,8 +267,28 @@
     "measure_temperature": {
       "type": "number",
       "title": {
-        "en": "Temperature",
-        "no": "Temperatur"
+        "en": "Requested Temperature",
+        "no": "Temperatur",
+        "nl": "Gevraagde Temperatuur"
+      },
+      "units": {
+        "en": "°C",
+        "no": "°C",
+        "nl": "°C"
+      },
+      "getable": true,
+      "setable": false,
+      "insights": true,
+      "min": 15,
+      "max": 25,
+      "step": 1
+    },
+    "measure_temperature_actual": {
+      "type": "number",
+      "title": {
+        "en": "Actual Temperature",
+        "no": "Werkelijke Temperatuur",
+        "nl": "Werkelijke Temperatuur"
       },
       "units": {
         "en": "°C",
@@ -266,6 +297,19 @@
       "getable": true,
       "setable": false,
       "insights": true
+    },
+    "set_temperature": {
+      "type": "number",
+      "title": {
+        "en": "Requested Temperature",
+        "nl": "Gevraagde Temperatuur"
+      },
+      "units": "°C",
+      "min": 15,
+      "max": 30,
+      "getable": true,
+      "setable": true,
+      "uiComponent": "thermostat"
     }
   }
 }

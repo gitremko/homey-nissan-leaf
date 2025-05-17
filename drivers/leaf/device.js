@@ -8,6 +8,8 @@ class LeafDevice extends Device {
   async onInit() {
     this.log('LeafDevice has been initialized');
 
+    this.addCapability('measure_temperature_actual');
+
     const {
       username, password, pollInterval, regionCode,
     } = this.getSettings();
@@ -44,6 +46,17 @@ class LeafDevice extends Device {
 
       return value;
     });
+
+    this.registerCapabilityListener('set_temperature', async (value) => {
+      try {
+        const client = await leafConnect({ username, password, regionCode });
+        await client.setTargetTemperature(value);
+        return value;
+      } catch (error) {
+        this.error(error);
+      }
+      return value;
+    });
   }
 
   async updateCapabilities(username, password, regionCode) {
@@ -77,7 +90,9 @@ class LeafDevice extends Device {
       this.setCapabilityValue('measure_battery', Number(BatteryStatus.SOC.Value)).catch(this.error);
       this.setCapabilityValue('is_charging', isCharging).catch(this.error);
       this.setCapabilityValue('is_connected', isConnected).catch(this.error);
-      this.setCapabilityValue('measure_temperature', Number(climateControlStatus.RemoteACRecords.Temparature)).catch(this.error);
+      this.setCapabilityValue('set_temperature', Number(climateControlStatus.RemoteACRecords.PreAC_temp)).catch(this.error);
+      this.log('Inc_temp (werkelijke temperatuur):', climateControlStatus.RemoteACRecords.Inc_temp);
+      this.setCapabilityValue('measure_temperature_actual', Number(climateControlStatus.RemoteACRecords.Inc_temp)).catch(this.error);
       this.setCapabilityValue('cruising_range_ac_off', Number(CruisingRangeAcOff) / 1000).catch(this.error);
       this.setCapabilityValue('cruising_range_ac_on', Number(CruisingRangeAcOn) / 1000).catch(this.error);
     } catch (error) {

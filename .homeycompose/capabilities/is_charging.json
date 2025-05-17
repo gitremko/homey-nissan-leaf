@@ -2,7 +2,8 @@
   "type": "boolean",
   "title": {
     "en": "Charging status",
-    "no": "Ladestatus"
+    "no": "Ladestatus",
+    "nl": "Laadstatus"
   },
   "getable": true,
   "setable": false,

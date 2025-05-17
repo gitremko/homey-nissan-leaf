@@ -1,6 +1,6 @@
 {
   "id": "com.nissan.leaf",
-  "version": "1.0.22",
+  "version": "1.0.25",
   "compatibility": ">=5.0.0",
   "sdk": 3,
   "brandColor": "#eb1b29",
@@ -11,11 +11,13 @@
   ],
   "name": {
     "en": "Nissan Leaf",
-    "no": "Nissan Leaf"
+    "no": "Nissan Leaf",
+    "nl": "Nissan Leaf"
   },
   "description": {
     "en": "Switch to smarter driving",
-    "no": "Bytt til smartere kjøring"
+    "no": "Bytt til smartere kjøring",
+    "nl": "Schakel over op slimmer rijden"
   },
   "category": [
     "tools"

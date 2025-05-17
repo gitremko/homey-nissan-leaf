@@ -2,7 +2,8 @@
   "type": "boolean",
   "title": {
     "en": "Climate control",
-    "no": "Klimakontroll"
+    "no": "Klimakontroll",
+    "nl": "Klimaatregeling"
   },
   "getable": true,
   "setable": true,

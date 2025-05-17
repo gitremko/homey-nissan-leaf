@@ -1,0 +1,65 @@
+{
+  "app": {
+    "name": "Nissan Leaf",
+    "description": "Schakel over op slimmer rijden"
+  },
+  "drivers": {
+    "leaf": {
+      "name": "Nissan Leaf",
+      "settings": {
+        "username": {
+          "label": "Gebruikersnaam",
+          "hint": "De naam van de gebruiker."
+        },
+        "password": {
+          "label": "Wachtwoord",
+          "hint": "Het wachtwoord van de gebruiker."
+        },
+        "pollInterval": {
+          "label": "Poll interval",
+          "units": "seconden",
+          "hint": "Hoe vaak de status moet worden opgevraagd"
+        },
+        "regionCode": {
+          "label": "Selecteer uw regio",
+          "values": {
+            "NE": "Europa",
+            "NCI": "Canada",
+            "NNA": "VS",
+            "NMA": "Australië",
+            "NML": "Japan"
+          }
+        }
+      }
+    }
+  },
+  "capabilities": {
+    "button_charging": {
+      "title": "Opladen"
+    },
+    "button_climate": {
+      "title": "Klimaatregeling"
+    },
+    "cruising_range_ac_off": {
+      "title": "Actieradius (km) AC uit"
+    },
+    "cruising_range_ac_on": {
+      "title": "Actieradius (km) AC aan"
+    },
+    "is_charging": {
+      "title": "Laadstatus"
+    },
+    "is_connected": {
+      "title": "Verbindingsstatus"
+    },
+    "measure_battery": {
+      "title": "Accuniveau"
+    },
+    "measure_temperature_actual": {
+      "title": "Werkelijke Temperatuur"
+    },
+    "set_temperature": {
+      "title": "Gevraagde Temperatuur"
+    }
+  }
+}

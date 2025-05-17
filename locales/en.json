@@ -1,14 +1,65 @@
 {
-  "settings": {
-    "title": "My Settings"
+  "app": {
+    "name": "Nissan Leaf",
+    "description": "Switch to smarter driving"
   },
-  "pair": {
-    "title": "Enter your credentials",
-		"validating": "Validating credentials",
-    "username": "Username",
-    "password": "Password",
-    "poll": "Poll interval (seconds)",
-    "region": "Select your region",
-    "save": "Save"
+  "drivers": {
+    "leaf": {
+      "name": "Nissan Leaf",
+      "settings": {
+        "username": {
+          "label": "Username",
+          "hint": "The username."
+        },
+        "password": {
+          "label": "Password",
+          "hint": "The password."
+        },
+        "pollInterval": {
+          "label": "Poll interval",
+          "units": "seconds",
+          "hint": "How often to poll for status updates"
+        },
+        "regionCode": {
+          "label": "Select your region",
+          "values": {
+            "NE": "Europe",
+            "NCI": "Canada",
+            "NNA": "US",
+            "NMA": "Australia",
+            "NML": "Japan"
+          }
+        }
+      }
+    }
+  },
+  "capabilities": {
+    "button_charging": {
+      "title": "Charging"
+    },
+    "button_climate": {
+      "title": "Climate Control"
+    },
+    "cruising_range_ac_off": {
+      "title": "Range (km) AC off"
+    },
+    "cruising_range_ac_on": {
+      "title": "Range (km) AC on"
+    },
+    "is_charging": {
+      "title": "Charging Status"
+    },
+    "is_connected": {
+      "title": "Connection Status"
+    },
+    "measure_battery": {
+      "title": "Battery Level"
+    },
+    "measure_temperature_actual": {
+      "title": "Actual Temperature"
+    },
+    "set_temperature": {
+      "title": "Requested Temperature"
+    }
   }
 }

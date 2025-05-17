@@ -1,0 +1,19 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Requested Temperature",
+    "no": "Temperatur",
+    "nl": "Gevraagde Temperatuur"
+  },
+  "units": {
+    "en": "°C",
+    "no": "°C",
+    "nl": "°C"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true,
+  "min": 15,
+  "max": 25,
+  "step": 1
+}

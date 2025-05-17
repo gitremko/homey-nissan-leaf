@@ -54,6 +54,7 @@ class LeafDriver extends Driver {
           'is_connected',
           'cruising_range_ac_off',
           'cruising_range_ac_on',
+          'set_temperature',
         ];
 
         const settings = {

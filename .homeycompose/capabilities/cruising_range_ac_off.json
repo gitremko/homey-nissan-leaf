@@ -2,7 +2,8 @@
 	"type": "number",
 	"title": {
 		"en": "Crusing range (km) AC off",
-    "no": "Rekkevidde (km) AC av"
+    "no": "Rekkevidde (km) AC av",
+    "nl": "Actieradius (km) AC uit"
 	},
 	"units": {
 		"en": "km",

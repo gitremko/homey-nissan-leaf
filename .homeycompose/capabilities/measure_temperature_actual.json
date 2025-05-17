@@ -1,0 +1,15 @@
+{
+  "type": "number",
+  "title": {
+    "en": "Actual Temperature",
+    "no": "Werkelijke Temperatuur",
+    "nl": "Werkelijke Temperatuur"
+  },
+  "units": {
+    "en": "°C",
+    "no": "°C"
+  },
+  "getable": true,
+  "setable": false,
+  "insights": true
+}

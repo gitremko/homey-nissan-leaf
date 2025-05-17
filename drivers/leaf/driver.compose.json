@@ -1,9 +1,13 @@
 {
   "name": {
-    "en": "Nissan Leaf"
+    "en": "Nissan Leaf",
+    "no": "Nissan Leaf",
+    "nl": "Nissan Leaf"
   },
   "class": "other",
   "capabilities": [
+    "measure_temperature_actual",
+    "set_temperature",
     "measure_battery",
     "button_climate",
     "button_charging",
